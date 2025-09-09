@@ -18,7 +18,7 @@ def main():
     if len(sys.argv) not in [2, 3]:
         sys.exit("Usage: python traffic.py data_directory [model.h5]")
 
-    # Get image arrays and labels for all image files
+    # Get image arrays and labels for all image files   
     images, labels = load_data(sys.argv[1])
 
     # Split data into training and testing sets
@@ -52,7 +52,7 @@ def load_data(data_dir):
             img_path=os.path.join(path,img)
             img=cv2.imread(img_path)
             img=cv2.resize(img,(IMG_WIDTH,IMG_HEIGHT))
-            img = img.astype("float32") / 255.0
+            img = img.astype("float32") / 255.0 
             images.append(img)
             labels.append(folder)
             #print(img)

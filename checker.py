@@ -53,7 +53,7 @@ ALL_SIGNS = {
 }
 IMG_WIDTH = 30
 IMG_HEIGHT = 30
-model=tf.keras.models.load_model("3conv1pool.h5")
+model=tf.keras.models.load_model("3conv1pool_normalised.h5")
 
 def main():
 
