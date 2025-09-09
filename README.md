@@ -1,20 +1,21 @@
 # Traffic Sign Classifier
 
-This Python project trains a **Convolutional Neural Network (CNN)** to classify traffic sign images into **43 categories** using TensorFlow and OpenCV.
+This Python project trains a **Convolutional Neural Network (CNN)** to classify traffic sign images into **43 categories** using TensorFlow and OpenCV
 
 ## Features
 
 - Loads and preprocesses image data using OpenCV,resizing images to all be equal size
-- Builds and trains a CNN with multiple convolutional layers and max pooling.  
-- Supports saving the trained model to a file.  
-- Evaluates model accuracy on a test set.
+- Builds and trains a CNN with multiple convolutional layers and max pooling
+- Supports saving the trained model to a file
+- Evaluates model accuracy on a test set
+- Function to predicr ur own road sign photos based on a chosen model
 
 ## Model Experiments
 - When experimenting with only one single convolution and pooling layer the accuracy was weak ,around 0.054 values with a loss over 3.5
 - Seeing this i have added 3 convolution layers with the same settings and the accuracy jumped to around 0.9858 with a loss of 0.0545 saving the model as 3conv1pool.h5
 - Afraid of overfitting i have tried using only 2 convolution layers but the accuracy was lower at 0.9753 with a loss of 0.1096
 - Since images have a really small dimension(30x30) i have tried no pooling but the results still have lower accuracy and bigger loss compared to 3conv1poll.h5
-
+- By normalising the images the accuary on same settings as 3conv1pool.h5 jumper to 0.991 with a loss of 0.04 and saved it to the best model 3conv1pool_normalised.h5
 
 ## Usage
 ```bash
