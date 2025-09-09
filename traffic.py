@@ -52,6 +52,7 @@ def load_data(data_dir):
             img_path=os.path.join(path,img)
             img=cv2.imread(img_path)
             img=cv2.resize(img,(IMG_WIDTH,IMG_HEIGHT))
+            img = img.astype("float32") / 255.0
             images.append(img)
             labels.append(folder)
             #print(img)
@@ -65,7 +66,8 @@ def get_model():
           tf.keras.layers.Input(shape=(IMG_WIDTH,IMG_HEIGHT,3)),
 
           tf.keras.layers.Conv2D(32,(3,3),activation="relu"),
-
+          tf.keras.layers.Conv2D(32,(3,3),activation="relu"),
+          tf.keras.layers.Conv2D(32,(3,3),activation="relu"),
 
           tf.keras.layers.MaxPooling2D(pool_size=(2,2)),
 
